@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var p = new Promise(function (resolve, reject) {
+        var a = 6;
+        var b = 4;
+        var c = a + b;
+        if (c == 10) {
+          resolve("correct");
+        } else {
+          reject("false");
+        }
+      });
+      p.then(function (fromresolve) {
+        document.write("promise is " + fromresolve);
+      }).catch(function (fromreject) {
+        document.write("promise is " + fromreject);
+      });
+    </script>
+  </body>
+</html>
